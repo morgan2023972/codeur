@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Intégration de Tailwind -->
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header (fixe avec menu burger) -->
+<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">MonApp</h1>
+
+        <!-- Icône du menu burger (visible sur petits écrans) -->
+        <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none" title="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+
+        <!-- Menu de navigation -->
+        <nav id="menu" class="hidden md:flex items-center space-x-4">
+            <a href="#" class="text-gray-600 hover:text-blue-500">Accueil</a>
+            <a href="#" class="text-gray-600 hover:text-blue-500">Fonctionnalités</a>
+            <a href="#" class="text-gray-600 hover:text-blue-500">Tarifs</a>
+            <a href="/connexion.html" class="text-gray-600 hover:text-blue-500">Connexion</a>
+            <a href="inscription.html">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1.5 px-4 rounded">Inscription</button>
+              </a>
+              
+
+        </nav>
+    </div>
+
+    <!-- Menu pour mobile (affiché après clic sur le burger) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-500">Accueil</a>
+        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-500">Fonctionnalités</a>
+        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-500">Tarifs</a>
+        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-500">Connexion</a>
+        <button class="w-full text-center bg-blue-500 text-white px-4 py-2 hover:bg-blue-600">S'inscrire</button>
+    </div>
+</header>
+
+
+    <!-- Hero Section -->
+<section class="bg-blue-100 text-center py-20 px-4 mt-16">
+    <h2 class="text-4xl font-extrabold text-gray-800">Trouvez des experts en quelques clics</h2>
+    <p class="mt-4 text-gray-600">Publiez votre projet et recevez des propositions rapidement.</p>
+    
+    <!-- Formulaire de recherche -->
+    <div class="mt-8 flex justify-center">
+        <input type="text" placeholder="Décrivez votre projet..." 
+               class="w-1/2 p-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button class="bg-blue-500 text-white px-6 py-3 rounded-r-md hover:bg-blue-600">Publier</button>
+    </div>
+
+    <!-- Boutons de catégories -->
+    <div class="mt-6 flex justify-center gap-4 flex-wrap"> 
+        <button class="bg-white text-blue-500 border border-blue-500 px-5 py-2 rounded-full hover:bg-blue-500 hover:text-white transition duration-300">
+            NoCode / LowCode
+        </button>
+        <button class="bg-white text-blue-500 border border-blue-500 px-5 py-2 rounded-full hover:bg-blue-500 hover:text-white transition duration-300">
+            Automatisation
+        </button>
+        <button class="bg-white text-blue-500 border border-blue-500 px-5 py-2 rounded-full hover:bg-blue-500 hover:text-white transition duration-300">
+            Intelligence Artificielle
+        </button>
+    </div>
+</section>
+
+
+    <!-- Section Fonctionnalités -->
+    <section class="container mx-auto px-4 py-16">
+        <h3 class="text-3xl font-bold text-center mb-10">Pourquoi choisir MonApp ?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 bg-white shadow rounded-lg text-center">
+                <h4 class="text-xl font-semibold mb-2">Rapide et efficace</h4>
+                <p class="text-gray-600">Recevez des propositions en quelques heures seulement.</p>
+            </div>
+            <div class="p-6 bg-white shadow rounded-lg text-center">
+                <h4 class="text-xl font-semibold mb-2">Des experts vérifiés</h4>
+                <p class="text-gray-600">Travaillez avec des professionnels qualifiés et évalués.</p>
+            </div>
+            <div class="p-6 bg-white shadow rounded-lg text-center">
+                <h4 class="text-xl font-semibold mb-2">Sécurité des paiements</h4>
+                <p class="text-gray-600">Des transactions sécurisées pour une tranquillité d’esprit.</p>
+            </div>
+            <div class="fixed bottom-2 right-2 bg-gray-200 text-sm px-2 py-1 rounded shadow-md md:bg-green-300 lg:bg-blue-300">
+                Mode Responsive
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Call to Action Final -->
+    <section class="bg-blue-500 text-white text-center py-12">
+        <h3 class="text-3xl font-bold">Prêt à démarrer ?</h3>
+        <p class="mt-2">Rejoignez des milliers d'entrepreneurs satisfaits.</p>
+        <button class="mt-4 bg-white text-blue-500 px-6 py-3 rounded hover:bg-gray-100">Publier un projet</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 MonApp. Tous droits réservés.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-white">Mentions légales</a>
+                <a href="#" class="hover:text-white">Politique de confidentialité</a>
+                <a href="#" class="hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    
+</body>
+</html>
